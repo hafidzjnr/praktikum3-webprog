@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Daftar Mahasiswa</h2>
+    <a href="/tambah">Tambah Data Baru</a><br><br>
+    <table border="1" cellpadding="10" cellspacing="0">
+        <tr>
+            <th>No</th><th>NIM</th><th>Nama</th><th>Jurusan</th><th>Aksi</th>
+        </tr>
+        <% let no = 1; mahasiswa.forEach(row => { %>
+        <tr>
+            <td><%= no++ %></td>
+            <td><%= row.npm %></td>
+            <td><%= row.nama %></td>
+            <td><%= row.jurusan %></td>
+            <td>
+                <a href="/edit/<%= row.id %>">Edit</a> | 
+                <a href="/hapus/<%= row.id %>" onclick="return confirm('Yakin ingin menghapus?')">Hapus</a>
+            </td>
+        </tr>
+        <% }) %>
+    </table>
+</body>
+</html>

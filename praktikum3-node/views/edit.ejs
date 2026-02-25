@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <h2>Edit Mahasiswa</h2>
+    <form method="POST" action="/edit/<%= data.id %>">
+        <label>NIM:</label><br><input type="text" name="npm" value="<%= data.npm %>" required><br>
+        <label>Nama:</label><br><input type="text" name="nama" value="<%= data.nama %>" required><br>
+        <label>Jurusan:</label><br><input type="text" name="jurusan" value="<%= data.jurusan %>" required><br><br>
+        <button type="submit">Update Data</button>
+        <a href="/">Batal</a>
+    </form>
+</body>
+</html>
