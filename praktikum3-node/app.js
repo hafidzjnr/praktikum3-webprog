@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true }));
 // Koneksi Database (tanpa password karena Laragon baru di-install ulang)
 const pool = mysql.createPool({
     host: 'localhost',
-    user: 'root',
-    password: '',
+    user: 'hafidz',
+    password: 'pasword',
     database: 'kampus'
 });
 
